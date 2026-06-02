@@ -1,5 +1,5 @@
 {
-  "name": "moss-admin",
+  "name": "g03-playground",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -12,7 +12,7 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@moss/ui": "workspace:*",
+    "@g03/ui": "workspace:*",
     "vue": "catalog:",
     "vue-router": "catalog:"
   },

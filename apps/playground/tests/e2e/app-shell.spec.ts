@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test'
 
-test.describe('moss admin app shell', () => {
+test.describe('g03 playground app shell', () => {
   test('renders the workbench route and can switch to delivery', async ({ page }) => {
     await page.goto('/')
 
@@ -10,7 +10,7 @@ test.describe('moss admin app shell', () => {
     await expect(
       page.getByRole('heading', {
         level: 1,
-        name: 'Moss Admin 的本地启动盘已经搭起来了'
+        name: 'G03 的本地启动盘已经搭起来了'
       })
     ).toBeVisible()
     await expect(page.getByText('Turborepo 已接入')).toBeVisible()

@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router
 import DeliveryView from '../views/delivery-view.vue'
 import WorkbenchView from '../views/workbench-view.vue'
 
-/** Primary navigation routes available in the starter admin application. */
+/** Primary navigation routes available in the starter playground application. */
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
@@ -22,7 +22,7 @@ const routes: RouteRecordRaw[] = [
 ]
 
 /**
- * GitHub Pages is static hosting, so the deployed admin app uses hash history to avoid 404 on refresh.
+ * GitHub Pages is static hosting, so the deployed playground app uses hash history to avoid 404 on refresh.
  */
 function resolveHistory() {
   if (import.meta.env.BASE_URL !== '/') {

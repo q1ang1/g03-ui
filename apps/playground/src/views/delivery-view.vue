@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PageContainer, SectionPanel } from '@moss/ui'
+import { PageContainer, SectionPanel } from '@g03/ui'
 
 type RuleItem = {
   title: string
@@ -49,7 +49,7 @@ const remoteSetupChecklist: string[] = [
 
 <template>
   <PageContainer
-    eyebrow="Moss Delivery"
+    eyebrow="G03 Delivery"
     title="远程接入后就按这套流程跑"
     description="这页把分支方案和 CI/CD 节点写清楚了，方便你后面接 GitHub 时直接按文档配置，不用再临时回忆。"
   >

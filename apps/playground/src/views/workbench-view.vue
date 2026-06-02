@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MetricCard, PageContainer, SectionPanel } from '@moss/ui'
+import { MetricCard, PageContainer, SectionPanel } from '@g03/ui'
 
 type MetricItem = {
   label: string
@@ -18,7 +18,7 @@ const metricItems: MetricItem[] = [
   {
     label: '已落骨架',
     value: '3 个包',
-    hint: 'apps/admin、docs、packages/ui 已经拆开。',
+    hint: 'apps/playground、docs、packages/ui 已经拆开。',
     tone: 'teal'
   },
   {
@@ -61,9 +61,9 @@ const projectHighlights: string[] = [
 
 <template>
   <PageContainer
-    eyebrow="Moss Dashboard"
-    title="Moss Admin 的本地启动盘已经搭起来了"
-    description="这个界面用来验证 Moss 命名、共享 UI 包和页面壳子都已经打通。后面你接 GitHub 之后，可以直接把它作为第一版演示入口。"
+    eyebrow="G03 Dashboard"
+    title="G03 的本地启动盘已经搭起来了"
+    description="这个界面用来验证 G03 命名、共享 UI 包和页面壳子都已经打通。后面你接 GitHub 之后，可以直接把它作为第一版演示入口。"
   >
     <template #actions>
       <span class="status-pill">Turborepo 已接入</span>

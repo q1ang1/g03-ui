@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 /**
- * Resolve the admin app base path so GitHub Pages opens the management shell by default.
+ * Resolve the playground app base path so GitHub Pages opens the showcase shell by default.
  */
 function resolveBasePath() {
   if (process.env.GITHUB_ACTIONS !== 'true') {

@@ -10,7 +10,7 @@ type NavigationItem = {
 
 const route = useRoute()
 
-/** Primary sections exposed by the starter admin interface. */
+/** Primary sections exposed by the starter playground interface. */
 const navigationItems: NavigationItem[] = [
   {
     label: '项目总览',
@@ -26,7 +26,7 @@ const navigationItems: NavigationItem[] = [
 
 /** Header title derived from the active navigation entry. */
 const currentSectionLabel = computed(
-  () => navigationItems.find((item) => item.to === route.path)?.label ?? 'Moss Admin'
+  () => navigationItems.find((item) => item.to === route.path)?.label ?? 'G03'
 )
 </script>
 
@@ -35,10 +35,10 @@ const currentSectionLabel = computed(
     <aside class="side-panel">
       <div class="brand-block">
         <p class="brand-tag">
-          Moss Admin
+          G03
         </p>
-        <h1>Moss Admin</h1>
-        <p>Moss 体系下的中后台起步仓库，先把界面、文档、工作区和流程整体接顺。</p>
+        <h1>G03</h1>
+        <p>G03 体系下的中后台起步仓库，先把界面、文档、工作区和流程整体接顺。</p>
       </div>
 
       <nav class="side-nav">

@@ -10,9 +10,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'MossUi',
-      fileName: 'moss-ui',
-      cssFileName: 'moss-ui'
+      name: 'G03Ui',
+      fileName: 'g03-ui',
+      cssFileName: 'g03-ui'
     },
     rollupOptions: {
       external: ['vue'],

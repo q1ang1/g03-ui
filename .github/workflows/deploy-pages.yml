@@ -1,4 +1,4 @@
-name: Deploy Admin and Docs to GitHub Pages
+name: Deploy Playground and Docs to GitHub Pages
 
 on:
   push:
@@ -37,22 +37,22 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build admin app
+      - name: Build playground app
         env:
           GITHUB_ACTIONS: 'true'
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: pnpm --filter moss-admin run build
+        run: pnpm --filter g03-playground run build
 
       - name: Build docs
         env:
           GITHUB_ACTIONS: 'true'
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: pnpm --filter moss-docs run build
+        run: pnpm --filter g03-docs run build
 
       - name: Assemble Pages artifact
         run: |
           mkdir -p .pages-dist/docs
-          cp -R apps/admin/dist/. .pages-dist/
+          cp -R apps/playground/dist/. .pages-dist/
           cp -R docs/.vitepress/dist/. .pages-dist/docs/
 
       - name: Configure Pages

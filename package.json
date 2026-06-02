@@ -1,5 +1,5 @@
 {
-  "name": "moss-admin-workspace",
+  "name": "g03-workspace",
   "private": true,
   "version": "0.1.0",
   "packageManager": "pnpm@10.32.1",
@@ -8,8 +8,8 @@
   },
   "scripts": {
     "dev": "turbo run dev",
-    "dev:admin": "turbo run dev --filter=moss-admin",
-    "dev:docs": "turbo run dev --filter=moss-docs",
+    "dev:playground": "turbo run dev --filter=g03-playground",
+    "dev:docs": "turbo run dev --filter=g03-docs",
     "build": "turbo run build",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",

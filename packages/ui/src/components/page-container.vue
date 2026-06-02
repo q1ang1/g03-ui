@@ -10,7 +10,7 @@ type PageContainerProps = {
 
 /** Stable title and description data for the current page. */
 const props = withDefaults(defineProps<PageContainerProps>(), {
-  eyebrow: 'Moss Admin'
+  eyebrow: 'G03'
 })
 </script>
 

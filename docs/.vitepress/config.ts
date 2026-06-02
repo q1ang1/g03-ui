@@ -27,13 +27,14 @@ function resolveAdminLink() {
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'Moss Docs',
-  description: 'Moss Admin 的工程文档与启动说明',
+  title: 'G03 Docs',
+  description: 'G03 的工程文档与启动说明',
   base: resolveBasePath(),
   themeConfig: {
     nav: [
-      { text: '管理台', link: resolveAdminLink() },
+      { text: '组件测试台', link: resolveAdminLink() },
       { text: '开始使用', link: '/guide/getting-started' },
+      { text: '配色系统', link: '/design/color-system' },
       { text: '分支策略', link: '/process/branch-strategy' }
     ],
     sidebar: [
@@ -43,10 +44,16 @@ export default defineConfig({
           { text: '启动说明', link: '/guide/getting-started' },
           { text: '分支策略', link: '/process/branch-strategy' }
         ]
+      },
+      {
+        text: '设计',
+        items: [
+          { text: '配色系统', link: '/design/color-system' }
+        ]
       }
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/q1ang1/moss-admin' }
+      { icon: 'github', link: 'https://github.com/q1ang1/G03-UI' }
     ]
   }
 })
