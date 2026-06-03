@@ -6,7 +6,7 @@ import vueParser from 'vue-eslint-parser'
 
 export default tseslint.config(
   {
-    ignores: ['**/dist/**', '**/coverage/**', '**/.turbo/**']
+    ignores: ['**/dist/**', '**/coverage/**', '**/.turbo/**', '**/.vitepress/cache/**']
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
@@ -22,7 +22,7 @@ export default tseslint.config(
     }
   },
   {
-    files: ['**/*.{ts,vue}'],
+    files: ['**/*.{ts,tsx,vue}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
