@@ -1,0 +1,8 @@
+// SCSS 命名空间改写:把 Element Plus 的类名前缀从默认 'el' 改成 'g'。
+// @forward ... with 在编译期覆盖 Element Plus 的 $namespace 变量,
+// 于是产出的 CSS 里 .el-button → .g-button、.el-input → .g-input …(不改组件代码)。
+@forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
+  $namespace: 'g'
+);
+
+@use 'element-plus/theme-chalk/src/index.scss' as *;
