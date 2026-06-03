@@ -1,6 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import DeliveryView from '../views/delivery-view.vue'
+import G03LabView from '../views/g03-lab-view'
 import WorkbenchView from '../views/workbench-view.vue'
 
 /** Primary navigation routes available in the starter playground application. */
@@ -18,6 +19,11 @@ const routes: RouteRecordRaw[] = [
     path: '/delivery',
     name: 'delivery',
     component: DeliveryView
+  },
+  {
+    path: '/g03-lab',
+    name: 'g03-lab',
+    component: G03LabView
   }
 ]
 
