@@ -1,0 +1,92 @@
+/**
+ * vars.css —— 由 src/tokens.ts 生成，请勿手改。
+ * 改动令牌后运行：pnpm --filter @g03/theme gen:styles
+ */
+
+html:root {
+  --g-color-primary: #0b5a58;
+  --g-color-primary-light-3: #548c8a;
+  --g-color-primary-light-5: #85acab;
+  --g-color-primary-light-7: #b6cdcd;
+  --g-color-primary-light-9: #e6eeee;
+  --g-color-primary-dark-2: #094846;
+  --g-border-radius-base: 6px;
+  --g-ui-button-font-weight: 600;
+  --g-ui-button-radius: var(--g-border-radius-base, 6px);
+  --g-ui-button-shadow: 0 1px 2px rgba(11, 90, 88, 0.18);
+  --g-ui-control-radius: var(--g-border-radius-base, 6px);
+  --g-ui-control-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --g-ui-control-focus-shadow: 0 0 0 3px rgba(11, 90, 88, 0.16);
+  --g-ui-surface-radius: var(--g-border-radius-base, 6px);
+  --g-ui-surface-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --g-comps-section-gap: 16px;
+  --g-comps-section-padding: 20px;
+  --g-comps-section-bg: #ffffff;
+  --g-comps-section-border-color: #e5e7eb;
+  --g-comps-section-radius: var(--g-border-radius-base, 6px);
+  --g-comps-section-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --g-comps-pager-gap: 12px;
+}
+
+html.dark {
+  --g-color-primary: #2dd4bf;
+  --g-color-primary-light-3: #26ab9a;
+  --g-color-primary-light-5: #1f8276;
+  --g-color-primary-light-7: #175952;
+  --g-color-primary-light-9: #0f3a36;
+  --g-color-primary-dark-2: #5fe0d0;
+  --g-border-radius-base: 6px;
+  --g-ui-button-font-weight: 600;
+  --g-ui-button-radius: var(--g-border-radius-base, 6px);
+  --g-ui-button-shadow: 0 1px 2px rgba(11, 90, 88, 0.18);
+  --g-ui-control-radius: var(--g-border-radius-base, 6px);
+  --g-ui-control-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --g-ui-control-focus-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+  --g-ui-surface-radius: var(--g-border-radius-base, 6px);
+  --g-ui-surface-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+  --g-comps-section-gap: 16px;
+  --g-comps-section-padding: 20px;
+  --g-comps-section-bg: #111c1b;
+  --g-comps-section-border-color: #2b3a38;
+  --g-comps-section-radius: var(--g-border-radius-base, 6px);
+  --g-comps-section-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+  --g-comps-pager-gap: 12px;
+}
+
+.g-btn {
+  font-weight: var(--g-ui-button-font-weight);
+  border-radius: var(--g-ui-button-radius);
+  box-shadow: var(--g-ui-button-shadow);
+}
+
+.g-comps-section {
+  display: grid;
+  gap: var(--g-comps-section-gap);
+  padding: var(--g-comps-section-padding);
+  background: var(--g-comps-section-bg);
+  border: 1px solid var(--g-comps-section-border-color);
+  border-radius: var(--g-comps-section-radius);
+  box-shadow: var(--g-comps-section-shadow);
+}
+
+.g-comps-pager {
+  display: flex;
+  align-items: center;
+  gap: var(--g-comps-pager-gap);
+}
+
+.g-input .g-input__wrapper,
+.g-select .g-select__wrapper {
+  border-radius: var(--g-ui-control-radius);
+  box-shadow: var(--g-ui-control-shadow);
+}
+
+.g-input .g-input__wrapper.is-focus {
+  box-shadow: var(--g-ui-control-focus-shadow);
+}
+
+.g-card,
+.g-dialog {
+  border-radius: var(--g-ui-surface-radius);
+  box-shadow: var(--g-ui-surface-shadow);
+}

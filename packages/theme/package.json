@@ -1,0 +1,33 @@
+{
+  "name": "@g03/theme",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Runtime-independent theme layer for G03 — design tokens, CSS variables, UnoCSS preset",
+  "exports": {
+    ".": "./src/index.ts",
+    "./preset/unocss": "./src/preset/unocss.ts",
+    "./styles": "./src/styles/vars.css"
+  },
+  "scripts": {
+    "gen:styles": "vite-node scripts/gen-styles.ts",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "unocss": "^66.0.0"
+  },
+  "peerDependenciesMeta": {
+    "unocss": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "eslint": "catalog:",
+    "typescript": "catalog:",
+    "unocss": "catalog:",
+    "vite": "catalog:",
+    "vite-node": "catalog:",
+    "vitest": "catalog:"
+  }
+}
