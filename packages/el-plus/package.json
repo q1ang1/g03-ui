@@ -1,0 +1,29 @@
+{
+  "name": "@g03/el-plus",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Element Plus transparent wrapper with unified g-* class prefix",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles/scss": "./src/styles/index.scss"
+  },
+  "scripts": {
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "element-plus": "^2.0.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "element-plus": "catalog:",
+    "eslint": "catalog:",
+    "sass": "catalog:",
+    "vue": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}

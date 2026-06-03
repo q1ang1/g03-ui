@@ -1,19 +1,22 @@
 <script setup lang="ts">
+import { GConfigProvider } from '@g03/el-plus'
 import { RouterView } from 'vue-router'
 import AppLayout from './components/app-layout.vue'
 </script>
 
 <template>
-  <AppLayout>
-    <RouterView v-slot="{ Component }">
-      <Transition
-        name="route-fade"
-        mode="out-in"
-      >
-        <component :is="Component" />
-      </Transition>
-    </RouterView>
-  </AppLayout>
+  <GConfigProvider>
+    <AppLayout>
+      <RouterView v-slot="{ Component }">
+        <Transition
+          name="route-fade"
+          mode="out-in"
+        >
+          <component :is="Component" />
+        </Transition>
+      </RouterView>
+    </AppLayout>
+  </GConfigProvider>
 </template>
 
 <style scoped lang="scss">

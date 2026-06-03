@@ -143,14 +143,32 @@
 
 - 创建、切换短期分支属于可直接执行的低风险操作；但**合并到 `develop` / `main`，以及任何 `push`，必须先经用户明确确认**，遵循下方「Git 与危险操作」。
 - 发现自己正处于 `main` 或 `develop` 时，先切出对应 `feature/*` / `fix/*` 分支再改动，不在长期分支上直接提交业务代码。
-- 提交信息沿用下方 Conventional Commits 约定。
+- 提交信息沿用下方「Commit Message 规范」。
 
 ## Git 与危险操作
 
 - 未经用户明确允许，禁止执行 `git push`、强推、硬重置、改写历史、删分支、批量删除文件等高风险操作。
 - 涉及 Git 时，优先使用只读命令确认现场，例如 `git status`、`git diff`、`git log`。
 - 不要把“修改代码”擅自扩大成“顺手整理提交历史”或“顺手清理仓库”。
-- 如需提交，遵循现有 Conventional Commits 风格，例如 `feat:`、`fix:`、`docs:`、`test:`、`chore:`。
+- 如需提交，遵循下方「Commit Message 规范」。
+
+## Commit Message 规范
+
+格式：`<type>:(<scope>) <emoji> <简短描述>`
+
+- `<type>`：Conventional Commits 类型 —— `feat` / `fix` / `docs` / `test` / `chore` / `refactor` / `build` / `perf` / `style` / `ci`。
+- `(<scope>)`：紧跟冒号后的影响模块，用小括号包裹，例如 `(el-plus)`、`(el-kit)`、`(el-comps)`、`(theme)`、`(playground)`、`(workspace)`、`(repo)`。
+- `<emoji>`：scope 之后空一格放一个表情，按改动语气随意挑（如 🎉 ✨ 🔧 🎨 🪝 🧩 🚀 🐛 📝 ♻️ ✅ 🎭）。
+- `<简短描述>`：中文，一句话讲清这次改动做了什么。
+
+示例：
+
+- `feat:(el-plus) 🎉 新增 Element Plus 透明包装层`
+- `fix:(router) 🐛 修复子路径部署刷新 404`
+- `chore:(workspace) 🔧 catalog 新增 unocss 与 vue-jsx`
+- `docs:(repo) 📝 补充提交规范`
+
+按「任务 / 功能模块」拆分提交：一个 commit 只做一件事，不要把多个不相关改动塞进同一个提交。
 
 ## 最终回复最低要求
 

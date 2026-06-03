@@ -1,0 +1,5 @@
+export { GButton } from './components/g-button'
+export { GConfigProvider } from './config-provider'
+export { G_ELEMENT_NAMESPACE, G_WRAPPER_CLASS_PREFIX, g03ElementNamespaceConfig } from './namespace'
+export { createTransparentWrapper } from './transparent'
+export type { TransparentWrapperComponent } from './transparent'

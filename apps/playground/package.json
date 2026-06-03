@@ -7,20 +7,28 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src --ext .ts,.vue",
+    "lint": "eslint src --ext .ts,.tsx,.vue",
     "typecheck": "vue-tsc --noEmit -p tsconfig.json",
     "test:e2e": "playwright test"
   },
   "dependencies": {
+    "@g03/el-comps": "workspace:*",
+    "@g03/el-kit": "workspace:*",
+    "@g03/el-plus": "workspace:*",
+    "@g03/theme": "workspace:*",
     "@g03/ui": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "element-plus": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
   },
   "devDependencies": {
     "@playwright/test": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
     "eslint": "catalog:",
     "sass": "catalog:",
+    "unocss": "catalog:",
     "vite": "catalog:",
     "vue-tsc": "catalog:"
   }

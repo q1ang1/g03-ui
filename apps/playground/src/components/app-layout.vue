@@ -21,6 +21,11 @@ const navigationItems: NavigationItem[] = [
     label: '交付方案',
     description: '看分支策略、CI/CD 节点和对外发布流程。',
     to: '/delivery'
+  },
+  {
+    label: 'G03 实验室',
+    description: '透明包装、headless 逻辑、主题令牌与 TSX 的体系演示。',
+    to: '/g03-lab'
   }
 ]
 
