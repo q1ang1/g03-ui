@@ -84,6 +84,14 @@ GitHub Pages 单仓双站：组件测试台发到站点根 `/`，文档站发到
 - `.github/workflows/deploy-pages.yml`：main push 时构建 playground + docs，组装为单站点（playground 在根、docs 在 `/docs/`）后发布。
 - `turbo.json` 把 `pnpm-lock.yaml`、`pnpm-workspace.yaml`、`tsconfig.base.json`、`.nvmrc`、`.github/workflows/*.yml` 列为 globalDependencies —— 改动其中任一会使 Turbo 全量缓存失效，属于预期行为。
 
+## Git 分支工作流
+
+`main`（主分支）、`develop`（开发分支）为长期分支，**不在其上直接做业务开发**。改动一律从最新 `develop` 切短期分支：新功能用 `feature/<描述>`，Bug 修复用 `fix/<描述>`。
+
+流转（每步验证通过才进入下一步）：`feature/*` 或 `fix/*` 分支自验通过 → 合并回 `develop`（跑 `pnpm check:affected`）→ `develop` 测试通过 → 合并到 `main`（跑 `pnpm check`）。
+
+合并到 `develop` / `main` 及任何 `push` 必须先经用户确认；创建、切换分支可直接执行。完整边界见 `AGENTS.md` 的「Git 分支工作流」与「Git 与危险操作」。
+
 ## 索引与导航
 
 仓库已建 CodeGraph 索引（`.codegraph/`），结构性问题（"X 在哪定义"、"什么调用 Y"、"改 Z 会影响什么"）优先用 `codegraph_*` MCP 工具，比 grep + read 更快也更准确。

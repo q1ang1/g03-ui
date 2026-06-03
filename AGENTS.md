@@ -125,6 +125,26 @@
   - 为什么没法验证
   - 可能残留什么风险
 
+## Git 分支工作流
+
+`main`（主分支）与 `develop`（开发分支）为长期分支，**不在其上直接做业务开发**。所有改动从最新 `develop` 切出短期分支完成：
+
+- 新功能：`feature/<简短描述>`，例如 `feature/metric-card-trend`。
+- Bug 修复：`fix/<简短描述>`，例如 `fix/router-hash-404`。
+
+标准流转，每一步验证通过后才进入下一步：
+
+1. 从最新 `develop` 切出 `feature/*` 或 `fix/*` 分支 → 验证：`git branch` 确认当前分支正确。
+2. 在该分支完成改动并按本文件「验证矩阵」自验 → 验证：相关 lint / typecheck / test / build 通过。
+3. 自验通过后合并回 `develop` → 验证：合并后在 `develop` 上跑 `pnpm check:affected`（或受影响 workspace 的最小验证）。
+4. `develop` 测试通过后再合并到 `main` → 验证：`pnpm check` 通过，确认可发布。
+
+边界：
+
+- 创建、切换短期分支属于可直接执行的低风险操作；但**合并到 `develop` / `main`，以及任何 `push`，必须先经用户明确确认**，遵循下方「Git 与危险操作」。
+- 发现自己正处于 `main` 或 `develop` 时，先切出对应 `feature/*` / `fix/*` 分支再改动，不在长期分支上直接提交业务代码。
+- 提交信息沿用下方 Conventional Commits 约定。
+
 ## Git 与危险操作
 
 - 未经用户明确允许，禁止执行 `git push`、强推、硬重置、改写历史、删分支、批量删除文件等高风险操作。
