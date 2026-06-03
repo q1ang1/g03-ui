@@ -1,6 +1,6 @@
 # 分支策略
 
-`G03-UI` 这个仓库建议使用 `GitHub Flow`。
+`g03-ui` 这个仓库建议使用 `GitHub Flow`。
 
 ## 推荐规则
 

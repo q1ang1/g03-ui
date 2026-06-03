@@ -53,7 +53,7 @@ export default defineConfig({
       }
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/q1ang1/G03-UI' }
+      { icon: 'github', link: 'https://github.com/q1ang1/g03-ui' }
     ]
   }
 })

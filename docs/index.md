@@ -11,8 +11,8 @@ G03 的文档站入口，线上会发布在 `/docs/`。
 - GitHub Actions 的 CI 与 Pages 部署工作流
 
 你可以先在本地把界面和结构跑起来，再去 GitHub 新建远程仓库并连接。
-现在默认访问的就是组件测试台首页：[https://q1ang1.github.io/G03-UI/](https://q1ang1.github.io/G03-UI/)
-文档入口放在这里：[https://q1ang1.github.io/G03-UI/docs/](https://q1ang1.github.io/G03-UI/docs/)
+现在默认访问的就是组件测试台首页：[https://q1ang1.github.io/g03-ui/](https://q1ang1.github.io/g03-ui/)
+文档入口放在这里：[https://q1ang1.github.io/g03-ui/docs/](https://q1ang1.github.io/g03-ui/docs/)
 
 ## 现在最适合做的事
 
