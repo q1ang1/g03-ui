@@ -1,0 +1,27 @@
+{
+  "name": "@g03/el-comps",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Composite components for G03, built on @g03/el-kit and @g03/el-plus (TSX)",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@g03/el-kit": "workspace:*",
+    "@g03/el-plus": "workspace:*"
+  },
+  "peerDependencies": {
+    "element-plus": "^2.0.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "element-plus": "catalog:",
+    "eslint": "catalog:",
+    "vue": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}
